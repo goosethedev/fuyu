@@ -7,11 +7,11 @@
     options = [ "defaults" "bind" ];
   };
 
-  fileSystems."/home/goose/Hypermind" = {
-    device = "/media/Data/Hypermind";
-    fsType = "none";
-    options = [ "defaults" "bind" ];
-  };
+  # fileSystems."/home/goose/Hypermind" = {
+  #   device = "/media/Data/Hypermind";
+  #   fsType = "none";
+  #   options = [ "defaults" "bind" ];
+  # };
 
   fileSystems."/home/goose/.password-store" = {
     device = "/media/Data/Pass";
@@ -25,9 +25,9 @@
     options = [ "defaults" "bind" ];
   };
 
-  fileSystems."/home/goose/Sync" = {
-    device = "/media/Data/Sync";
-    fsType = "none";
-    options = [ "defaults" "bind" ];
-  };
+  # fileSystems."/home/goose/Sync" = {
+  #   device = "/media/Data/Sync";
+  #   fsType = "none";
+  #   options = [ "defaults" "bind" ];
+  # };
 }

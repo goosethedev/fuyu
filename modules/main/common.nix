@@ -69,9 +69,9 @@
   };
 
   # Enable Nix Direnv
-  programs.direnv.enable = true;
+  # programs.direnv.enable = true;
 
   # Solve KDE theming (doesn't work?)  
-  programs.dconf.enable = true;
+  # programs.dconf.enable = true;
   
 }

@@ -3,6 +3,7 @@
 {
   imports = [
     ./home-folder-binds.nix
+    ./local-folder-binds.nix
   ];
 
   # Fstab mount Data partition
