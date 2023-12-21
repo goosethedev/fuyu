@@ -1,3 +1,4 @@
+
 { config, lib, pkgs, ... }:
 
 {
@@ -7,8 +8,8 @@
 
   # Fstab mount Data partition
   fileSystems."/media/Data" = {
-    device = "/dev/sda8";
-    fsType = "ntfs";
+    device = "/dev/sda3";
+    fsType = "ext4";
     options = [ "defaults" "utf8" "umask=000" "dmask=0027" "fmask=137" "gid=1000" "uid=1000" ];
   };
 }

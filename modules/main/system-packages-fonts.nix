@@ -30,7 +30,7 @@
     wireplumber
     wl-clipboard
     xdg-utils
-    zsh
+    # zsh
   ];
 
   # Fonts
@@ -42,6 +42,6 @@
     fira-code-symbols
     # rictydiminished-with-firacode
     comic-mono
-    (nerdfonts.override { fonts = [ "FiraCode" ]; })
+    # (nerdfonts.override { fonts = [ "FiraCode" ]; })
   ];
 }

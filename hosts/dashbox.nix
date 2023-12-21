@@ -22,10 +22,10 @@ in {
       # ../modules/hyprland/nvidia.nix
 
       # Include mounts for this machine
-      # ../modules/fstab/${hostname}.nix
+      ../modules/fstab/${hostname}.nix
 
       # Include utils
-      ../modules/utils/zsh.nix
+      # ../modules/utils/zsh.nix
       # ../modules/utils/docker.nix
       ../modules/utils/japanese.nix
     ];
@@ -34,5 +34,9 @@ in {
   # environment.systemPachages = with pkgs; [];
 
   # User packages overrides (specific for this host)
-  # users.users.${username}.packages = with pkgs; [];
+  users.users.${username}.packages = with pkgs; [
+    home-manager
+    pass-wayland
+    passExtensions.pass-otp
+  ];
 }
