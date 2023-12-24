@@ -3,34 +3,27 @@
 
 {
   # List packages installed in system profile
+  # Here should go packages that root may need. Otherwise state them in HM
   environment.systemPackages = with pkgs; [
-    appimage-run  # Tools to run AppImages
-    brightnessctl
-    dunst
+    brightnessctl # Move to HM
+    dunst # Move to HM
     efibootmgr
-    gammastep
     gcc
     git
     gnupg
-    grimblast
+    home-manager
     hyprpaper
-    jq  # eww script dep
     killall
-    kitty
     pinentry
     pipewire
-    playerctl
+    playerctl # Move to HM
     refind
-    rofi-wayland
-    socat  # eww script dep
-    unzip
+    rofi-wayland # Move to HM
     vim
-    waybar
     wget
     wireplumber
     wl-clipboard
     xdg-utils
-    # zsh
   ];
 
   # Fonts
@@ -40,8 +33,6 @@
     noto-fonts-emoji
     fira-code
     fira-code-symbols
-    # rictydiminished-with-firacode
     comic-mono
-    # (nerdfonts.override { fonts = [ "FiraCode" ]; })
   ];
 }

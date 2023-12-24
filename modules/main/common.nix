@@ -45,33 +45,11 @@
     wireplumber.enable = true;
   };
 
-  # Enable SDDM (couldn't make it work)
-  #services.xserver.enable = true;
-  #services.xserver.displayManager.autoLogin = {
-  #  enable = true;
-  #  user = "goose";
-  #};
-  #services.xserver.displayManager.sddm = {
-  #  enable = true;
-  #  settings = {
-  #    Autologin = {
-  #      Session = "Hyprland";
-  #       User = "goose";
-  #    };
-  #  };
-  #};
-
-  # Enable GNUGP                  
+  # Enable GnuPG
   services.pcscd.enable = true;
   programs.gnupg.agent = {
     enable = true;
     pinentryFlavor = "gtk2";
   };
-
-  # Enable Nix Direnv
-  # programs.direnv.enable = true;
-
-  # Solve KDE theming (doesn't work?)  
-  # programs.dconf.enable = true;
-  
+ 
 }

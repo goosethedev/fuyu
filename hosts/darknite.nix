@@ -26,21 +26,14 @@ in {
       ../modules/fstab/${hostname}.nix
 
       # Include utils
-      # ../modules/utils/zsh.nix
+      ../modules/utils/zsh.nix
       ../modules/utils/docker.nix
-      ../modules/utils/japanese.nix
     ];
 
   # System packages overrides (specific for this host)
   # environment.systemPachages = with pkgs; [];
 
   # User packages overrides (specific for this host)
-  users.users.${username}.packages = with pkgs; [
-    htop
-    libsForQt5.dolphin
-    pass-wayland
-    passExtensions.pass-otp
-    tmux
-    xfce.thunar
-  ];
+  # users.users.${username}.packages = with pkgs; [
+  # ];
 }
