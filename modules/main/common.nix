@@ -5,7 +5,7 @@
   nixpkgs.config.allowUnfree = true;
 
   # Allow Flakes
-   nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
   # Use the systemd-boot EFI boot loader.
   boot.loader.systemd-boot.enable = true;
@@ -52,4 +52,7 @@
     pinentryFlavor = "gnome3";
   };
  
+  # Enable NixLD to run dynamic binaries
+  # Didn't manage to make it work but someday will :)
+  programs.nix-ld.enable = true;
 }
