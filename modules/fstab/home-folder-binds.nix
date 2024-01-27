@@ -3,11 +3,12 @@
 {
   # SYNCED - To be synced with Syncthing
 
-  fileSystems."/home/goose/Books" = {
-    device = "/media/Data/Books";
-    fsType = "none";
-    options = [ "defaults" "bind" "nofail" ];
-  };
+  # Not useful in Daydream
+  # fileSystems."/home/goose/Books" = {
+  #   device = "/media/Data/Books";
+  #   fsType = "none";
+  #   options = [ "defaults" "bind" "nofail" ];
+  # };
 
   fileSystems."/home/goose/.password-store" = {
     device = "/media/Data/Pass";
@@ -15,11 +16,12 @@
     options = [ "defaults" "bind" "nofail" ];
   };
 
-  fileSystems."/home/goose/Personal" = {
-    device = "/media/Data/Personal";
-    fsType = "none";
-    options = [ "defaults" "bind" "nofail" ];
-  };
+  # Moved to separate NTFS partition
+  # fileSystems."/home/goose/Personal" = {
+  #   device = "/media/Data/Personal";
+  #   fsType = "none";
+  #   options = [ "defaults" "bind" "nofail" ];
+  # };
 
   fileSystems."/home/goose/Projects" = {
     device = "/media/Data/Projects";

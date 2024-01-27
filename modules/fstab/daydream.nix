@@ -5,17 +5,30 @@
     ./home-folder-binds.nix
   ];
 
-  # Fstab mount Data partition
+  # Fstab mount Data partition (ext4)
   fileSystems."/media/Data" = {
     device = "/dev/disk/by-label/Data";
-    fsType = "ntfs";
-    options = [ "defaults" "utf8" "umask=000" "dmask=0027" "fmask=137" "gid=1000" "uid=1000" ];
+    options = [ "nofail" ];
   };
 
-  # Mount Vault
+  # Mount /var/lib/docker data from Data
+  fileSystems."/var/lib/docker" = {
+    device = "/media/Data/System/docker";
+    fsType = "none";
+    options = [ "defaults" "bind" "nofail" ];
+  };
+
+  # Fstab mount Personal partition (NTFS)
+  fileSystems."/home/goose/Personal" = {
+    device = "/dev/disk/by-label/Personal";
+    fsType = "ntfs";
+    options = [ "defaults" "utf8" "umask=000" "dmask=0027" "fmask=137" "gid=100" "uid=1000" "nofail" ];
+  };
+
+  # Mount Vault (NTFS)
   fileSystems."/home/goose/Vault" = {
     device = "/dev/disk/by-label/Vault";
     fsType = "ntfs";
-    options = [ "defaults" "utf8" "umask=000" "dmask=0027" "fmask=137" "gid=1000" "uid=1000" ];
+    options = [ "defaults" "utf8" "umask=000" "dmask=0027" "fmask=137" "gid=100" "uid=1000" "nofail" ];
   };
 }
