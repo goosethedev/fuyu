@@ -11,6 +11,7 @@
     gcc
     git
     gnupg
+    gptfdisk
     home-manager
     hyprpaper
     killall
