@@ -53,6 +53,6 @@
   };
  
   # Enable NixLD to run dynamic binaries
-  # Didn't manage to make it work but someday will :)
-  programs.nix-ld.enable = true;
+  # No longer necessary, FHS env is enough
+  # programs.nix-ld.enable = true;
 }
