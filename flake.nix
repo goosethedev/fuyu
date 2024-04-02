@@ -37,7 +37,7 @@
         specialArgs = { inherit system; };
 
         modules = [
-          ./hosts/darknite.nix
+          ./hosts/darknite
         ];
       };
     };

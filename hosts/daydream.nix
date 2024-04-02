@@ -8,9 +8,6 @@ in {
 
   imports =
     [
-      # Include hardware config
-      /etc/nixos/hardware-configuration.nix
-
       # Include common configs
       ../modules/main/common.nix
       (import ../modules/main/users-config.nix { username = username; })
