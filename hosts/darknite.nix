@@ -14,7 +14,7 @@ in {
 
       # Include common configs
       ../modules/main/common.nix
-      (import ../modules/main/user-packages.nix { username = username; })
+      (import ../modules/main/users-config.nix { username = username; })
       (import ../modules/main/networking.nix { hostname = hostname; })
       ../modules/main/system-packages-fonts.nix
 
